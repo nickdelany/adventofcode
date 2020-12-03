@@ -19,7 +19,6 @@ namespace AdventOfCode2020
             var len = contents.Length;
             
             int [] trees = new []{ 0,0,0,0,0};
-            int [] nope  = new []{ 0,0,0,0,0};
             int [] right = new []{ 1,3,5,7,1};
             int [] down  = new []{ 1,1,1,1,2};
 
@@ -37,14 +36,7 @@ namespace AdventOfCode2020
 
                     if (contents[y][x] == '#')
                         trees[i]++;
-                    else
-                        nope[i]++;
                 }
-            }
-
-            for (var i = 0; i < 5; i++)
-            {
-                Console.WriteLine(trees[i]);                
             }
 
             Console.WriteLine((long)trees[0]*trees[1]*trees[2]*trees[3]*trees[4]);
