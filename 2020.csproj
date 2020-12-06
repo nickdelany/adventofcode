@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>AdventOfCode2020</RootNamespace>
-    <StartupObject>AdventOfCode2020.Day4</StartupObject>
+    <StartupObject>AdventOfCode2020.Day5</StartupObject>
   </PropertyGroup>
 
 </Project>
