@@ -26,12 +26,25 @@ namespace AdventOfCode2020
             Console.WriteLine(Seat("BBFFBBFRLL") == 4);
 
             var contents = System.IO.File.ReadAllLines("input/day05.data");
-            int highest = 0;
+            int highest = 0, lowest = 1000;
+
+            var data = new Boolean[1000];
 
             foreach (var pass in contents)
             {
                 var h = SeatID(pass);
+                data[h] = true;
                 if (h > highest) highest = h;
+                if (h < lowest) lowest = h;
+            }
+
+            for (int i = lowest + 1; i < highest; i++)
+            {
+                if (!data[i] && data[i-1] & data[i+1])
+                {
+                    Console.WriteLine("Seat: " + i);
+                    break;
+                }
             }
 
             Console.WriteLine(highest);
